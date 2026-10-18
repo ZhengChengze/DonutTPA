@@ -1,0 +1,41 @@
+name: DonutTPA
+version: '${project.version}'
+main: com.donuttpa.DonutTPA
+api-version: '1.20'
+authors: [ Chéngzé ]
+description: Lightweight, clean TPA plugin with warmup, cooldowns, and expiration.
+
+commands:
+  tpa:
+    description: Send a teleport request to a player
+    usage: /<command> <player>
+    permission: donuttpa.use
+  tpahere:
+    description: Request a player to teleport to you
+    usage: /<command> <player>
+    permission: donuttpa.use
+  tpaccept:
+    description: Accept a teleport request
+    usage: /<command> [player]
+    aliases: [ tpyes ]
+    permission: donuttpa.use
+  tpdeny:
+    description: Deny a teleport request
+    usage: /<command> [player]
+    aliases: [ tpno ]
+    permission: donuttpa.use
+  tpacancel:
+    description: Cancel an outgoing teleport request
+    usage: /<command>
+    permission: donuttpa.use
+
+permissions:
+  donuttpa.use:
+    description: Allows players to use TPA commands
+    default: true
+  donuttpa.bypass.cooldown:
+    description: Bypass the TPA request cooldown
+    default: op
+  donuttpa.bypass.delay:
+    description: Bypass the teleport warmup delay
+    default: op

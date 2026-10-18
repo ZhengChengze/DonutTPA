@@ -1,0 +1,52 @@
+# ==========================================
+#          DonutTPA Configuration
+# ==========================================
+
+settings:
+  request-expire-seconds: 60
+  teleport-delay-seconds: 5
+  cooldown-seconds: 10
+  cancel-on-move: true
+
+messages:
+  prefix: "&6[DonutTPA] &r"
+  no-permission: "&cYou do not have permission to use this command."
+  only-players: "&cOnly players can execute this command."
+  usage-tpa: "&cUsage: /tpa <player>"
+  usage-tpahere: "&cUsage: /tpahere <player>"
+  player-not-found: "&cPlayer &e%player% &cis not online."
+  cannot-tpa-self: "&cYou cannot send a teleport request to yourself."
+  cooldown-active: "&cPlease wait &e%time%s &cbefore sending another request."
+  already-pending: "&cYou already have a pending request to &e%player%&c."
+  
+  # Sent when /tpa or /tpahere is used
+  request-sent: "&aTeleport request sent to &e%target%&a. It expires in &e%expire%s&a."
+  request-received: "&e%sender% &ahas requested to teleport to you."
+  request-received-tpa: "&e%sender% &ahas requested to teleport to you."
+  request-received-tpahere: "&e%sender% &ahas requested that you teleport to them."
+  
+  # Interactive Chat Buttons
+  buttons-prefix: "&7Click an option: "
+  button-accept-text: "&a&l[✔ Accept]"
+  button-accept-hover: "&aClick to accept %sender%'s request"
+  button-deny-text: "&c&l[✖ Deny]"
+  button-deny-hover: "&cClick to deny %sender%'s request"
+  
+  # Accept / Deny / Cancel / Expiration
+  no-pending-requests: "&cYou do not have any pending teleport requests."
+  no-outgoing-requests: "&cYou do not have any outgoing teleport requests to cancel."
+  no-pending-outgoing: "&cYou do not have any outgoing teleport requests to cancel."
+  request-accepted-target: "&aYou accepted &e%sender%'s &ateleport request."
+  request-accepted-sender: "&e%target% &aaccepted your teleport request!"
+  request-denied-target: "&cYou denied &e%sender%'s &cteleport request."
+  request-denied-sender: "&e%target% &cdenied your teleport request."
+  request-cancelled: "&eYou cancelled your teleport request to &6%target%&e."
+  request-expired-sender: "&cYour teleport request to &e%target% &chas expired."
+  request-expired-target: "&cThe teleport request from &e%sender% &chas expired."
+  
+  # Teleport Warmup & Status
+  teleport-warmup: "&aTeleporting in &e%delay% seconds&a... Do not move!"
+  teleport-success: "&aTeleported successfully!"
+  teleport-cancelled-moved: "&cTeleport cancelled because you moved!"
+  teleport-cancelled-moved-other: "&cTeleport cancelled because &e%player% &cmoved!"
+  teleport-cancelled-offline: "&cTeleport cancelled because the other player went offline."
